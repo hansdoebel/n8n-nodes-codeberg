@@ -1,0 +1,60 @@
+{
+	"name": "n8n-nodes-codeberg",
+	"version": "0.1.0",
+	"description": "n8n community node for Codeberg (Forgejo/Gitea) API integration",
+	"license": "MIT",
+	"homepage": "https://github.com/hansdoebel/n8n-nodes-codeberg#readme",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "Hans Doebel",
+		"email": "hansdev@mailbox.org"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hansdoebel/n8n-nodes-codeberg.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease",
+		"test": "bun test"
+	},
+	"files": [
+		"dist"
+	],
+	"funding": {
+		"type": "buymeacoffee",
+		"url": "https://buymeacoffee.com/hansdoebel"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/CodebergApi.credentials.js",
+			"dist/credentials/CodebergOAuth2Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Codeberg/Codeberg.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"@types/node": "^25.3.0",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
