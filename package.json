@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-codeberg",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "n8n community node for Codeberg (Forgejo/Gitea) API integration",
 	"license": "MIT",
 	"homepage": "https://github.com/hansdoebel/n8n-nodes-codeberg#readme",
@@ -22,7 +22,6 @@
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
 		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease",
 		"test": "bun test"
 	},
 	"files": [
